@@ -63,7 +63,7 @@ h1 {
 
 .floating-peter {
     position: absolute;
-    width: 60px; /* Adjust size if needed */
+    width: 200px; /* Size updated to be 3x larger than before */
     opacity: 0;
     transition: opacity 3s ease-in-out;
     pointer-events: none; /* Prevents interference with other elements */

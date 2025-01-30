@@ -46,10 +46,17 @@ h1 {
     margin: 20px 0;
 }
 
-/* Party GIF or Image */
+/* Animated funny face shifting left and right */
+@keyframes lookAround {
+    0% { transform: translateX(-10px) rotate(-5deg); }
+    50% { transform: translateX(10px) rotate(5deg); }
+    100% { transform: translateX(-10px) rotate(-5deg); }
+}
+
 .party-gif {
     width: 100%;
     max-width: 300px;
     margin-top: 20px;
     border-radius: 10px;
+    animation: lookAround 1s infinite alternate ease-in-out;
 }

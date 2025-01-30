@@ -31,7 +31,7 @@ updateCountdown();
 
 function createFloatingPeter() {
     const peter = document.createElement("img");
-    peter.src = "peter_and_heidi_today.jpg"; // Use the uploaded image
+    peter.src = "peter_and_heidi_today.jpg"; // Now using .jpg
     peter.className = "floating-peter";
 
     // Random position anywhere on the page

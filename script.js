@@ -28,3 +28,33 @@ function updateCountdown() {
 // Update countdown every second
 setInterval(updateCountdown, 1000);
 updateCountdown();
+
+function createFloatingPeter() {
+    const peter = document.createElement("img");
+    peter.src = "peter_and_heidi_today.png"; // Use the uploaded image
+    peter.className = "floating-peter";
+
+    // Random position anywhere on the page
+    const x = Math.random() * (window.innerWidth - 60); // Keep inside viewport
+    const y = Math.random() * (window.innerHeight - 60);
+
+    peter.style.left = `${x}px`;
+    peter.style.top = `${y}px`;
+    peter.style.position = "absolute";
+
+    document.body.appendChild(peter);
+
+    // Fade in, then fade out, then remove
+    setTimeout(() => {
+        peter.style.opacity = 1;
+        setTimeout(() => {
+            peter.style.opacity = 0;
+            setTimeout(() => {
+                document.body.removeChild(peter);
+            }, 3000);
+        }, 3000);
+    }, 100);
+}
+
+// Spawn a new floating Peter face every 3 seconds
+setInterval(createFloatingPeter, 3000);

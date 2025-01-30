@@ -7,6 +7,13 @@ function updateCountdown() {
 
     if (timeLeft <= 0) {
         document.getElementById("countdown").innerHTML = "Happy Birthday, Peter!";
+        
+        // Swap the funny face with the party GIF
+        document.getElementById("funnyFace").src = "party.gif";
+        
+        // Remove the looking around animation
+        document.getElementById("funnyFace").style.animation = "none";
+        
         return;
     }
 
